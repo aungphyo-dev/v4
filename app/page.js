@@ -1,7 +1,7 @@
 "use client"
 import {useEffect} from "react";
 import anime from "animejs";
-import {About, Hero} from "@/components/index";
+import {About, Hero,Experience} from "@/components";
 const Home = () => {
     useEffect(() => {
         const effect = document.getElementById("bg-effect");
@@ -47,6 +47,7 @@ const Home = () => {
                     </div>
                     <div className='min-h-screen flex flex-col justify-start items-center px-5 lg:px-16'>
                         <About/>
+                        <Experience/>
                     </div>
                 </div>
             </div>
