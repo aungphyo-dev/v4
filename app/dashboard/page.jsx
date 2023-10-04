@@ -13,6 +13,9 @@ const Dashboard = () => {
             setProjects(data)
         }
     }
+    const deleteData = async (id)=>{
+        await supabase.from("projects").delete().eq("id",id)
+    }
     const session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
     useEffect(() => {
         getData()
@@ -54,8 +57,9 @@ const Dashboard = () => {
                         </th>
                         <td className="px-6 py-4 flex">
                             <Link href={`/dashboard/edit/${project.id}`}  className="font-medium  text-blue-500 hover:underline mr-2">Edit</Link>
-                            <button onClick={async ()=>{
+                            <button onClick={()=>{
                                 if (confirm("Do you wanna delete this")){
+                                    deleteData(project.id)
                                 }
                             }} className="font-medium  text-blue-500 hover:underline">Delete</button>
                         </td>
