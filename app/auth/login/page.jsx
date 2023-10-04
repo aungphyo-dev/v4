@@ -7,13 +7,7 @@ const Login = () => {
     const router = useRouter()
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
-    const session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
-    useEffect(() => {
-        router.prefetch("/dashboard/")
-        if (session){
-            router.push("/dashboard")
-        }
-    }, []);
+
     const handleLogin =async (e) => {
       e.preventDefault()
         const { data, error } = await supabase.auth.signInWithPassword({
