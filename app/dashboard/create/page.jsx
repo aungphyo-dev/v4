@@ -3,7 +3,10 @@ import {useEffect, useState} from "react";
 import {BsPlusSquareFill} from "react-icons/bs";
 import {GrFormClose} from "react-icons/gr";
 import supabase from "@/services/supabase";
+import {useRouter} from "next/navigation";
 const Edit = () => {
+    const router = useRouter()
+    const session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
     const [file,setFile] = useState(null)
     const [url,setUrl] = useState(null)
     const handlePhotochange = (e) => {
@@ -21,6 +24,11 @@ const Edit = () => {
             imagePreview(file)
         }
     },[file])
+    useEffect(() => {
+        if (session === null){
+            router.replace("/")
+        }
+    }, []);
     const [title,setTitle] = useState("");
     const [demo,setDemo] = useState("");
     const [description,setDescription] = useState("");
