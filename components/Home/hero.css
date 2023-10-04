@@ -1,0 +1,40 @@
+.hero-session {
+    @apply w-full  relative bg-transparent
+}
+
+.hero-pt-1 {
+    @apply w-full flex flex-col justify-start items-start
+}
+
+.hero-pt-1-subtitle {
+    @apply text-[#C4D0EC]  font-normal
+}
+
+
+.hero-pt-1-title {
+    @apply font-extrabold text-3xl lg:text-5xl text-[#CEE6F3] tracking-wide
+}
+
+.hero-pt-1-paragraph {
+    @apply text-[#8892B0]
+}
+
+.hero-pt-1-btn-container {
+    @apply flex justify-center items-center space-x-3
+}
+
+.hero-pt-1-btn {
+    @apply px-4 py-2 rounded-3xl bg-blue-600 text-white hover:bg-blue-900 transition-colors duration-500
+}
+.hero-pt-1-icons {
+    @apply text-blue-600 transition-transform duration-500 peer-hover:-rotate-180
+}
+.hero-pt-1-social-link {
+    @apply p-2   text-black bg-gray-400 border  border-gray-400 hover:bg-transparent hover:text-white rounded-full
+}
+.project-countUp{
+    @apply px-2 w-[137px] h-[50px] bg-gray-100  text-[#11234]  rounded-lg  absolute z-[20] top-[40%] right-[5%] flex justify-center items-center font-bold
+}
+.hero-scroll-btn{
+    @apply absolute bottom-[5%] right-0 p-2 border border-gray-800  rounded-full animate-bounce z-[150]
+}

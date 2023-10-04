@@ -1,0 +1,34 @@
+.about-session{
+    @apply w-full bg-transparent relative
+}
+
+.about-ct-2-div{
+    @apply w-full py-0 lg:py-5 flex flex-col justify-start items-start
+}
+.about-ct-2-title{
+    @apply text-2xl font-bold text-blue-600 mb-2
+}
+.about-ct-2-sub{
+    @apply text-blue-600  font-semibold text-4xl mb-5 font-aceme
+}
+.about-ct-2-para{
+    @apply text-[16px] leading-[26px]  mb-5 text-[#8892b0]
+}
+.experience-card{
+    @apply z-10 flex items-center justify-center w-9 h-9 md:w-6 md:h-6 rounded-full ring-0 ring-white  sm:ring-8  shrink-0
+}
+.exp-company-img{
+    @apply w-full h-full rounded-md md:rounded-full
+}
+.about-exp-bar{
+    @apply hidden sm:flex w-full bg-gray-400 h-0.5
+}
+.exp-company-title{
+    @apply text-lg font-semibold text-gray-300
+}
+.exp-time{
+    @apply block mb-2 text-sm font-normal leading-none text-gray-400
+}
+.exp-sub{
+    @apply text-base font-normal text-gray-500
+}

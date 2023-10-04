@@ -1,27 +1,67 @@
+@import url(https://fonts.bunny.net/css?family=acme:400|akaya-kanadaka:400|poppins:400,500,600,700,800,900);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.cursor--dot {
+    width: 6px;
+    height: 6px;
+    left: -3px;
+    top: -3px;
+    border-radius: 100%;
+    z-index: 11000;
+    background: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.active .nav-indicator{
+    width: 4rem;
+    background: rgb(226,232,240);
+}
+.active .nav-text{
+    color :rgb(226,232,240)
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+::-webkit-scrollbar {
+    width: 4px;
+    display: none;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    overflow: hidden;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #562aac;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #160e56;
+}
+
+.progress {
+    height: 3px;
+    border-radius: 3rem;
+    background: blue;
+    width: 100%;
+    transform-origin: 0 50%;
+    animation: scaleProgress auto linear;
+    animation-timeline: scroll(root);
+}
+
+@keyframes scaleProgress {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+

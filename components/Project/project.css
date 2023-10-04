@@ -1,0 +1,21 @@
+.project-ct-2-sub{
+    @apply w-full text-blue-600 md:text-center text-start dark:text-blue-500 font-semibold text-4xl mb-5 font-aceme
+}
+.project-card{
+    @apply flex flex-col md:grid grid-cols-2 bg-gray-200 dark:bg-gray-700 rounded-lg
+}
+.project-card-img{
+    @apply w-full h-[220px]  object-fill rounded-lg
+}
+.project-card-title{
+    @apply text-xl font-bold tracking-tight text-gray-900 dark:text-white
+}
+.project-card-sub{
+    @apply text-gray-500 dark:text-gray-400
+}
+.project-card-para{
+    @apply mt-3 mb-4 font-light text-gray-500 dark:text-gray-400
+}
+.project-card-link{
+    @apply flex px-3 py-1 justify-center items-center  bg-gray-400 dark:bg-gray-900 rounded-3xl gap-x-2 text-sm dark:text-gray-50
+}

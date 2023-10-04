@@ -1,0 +1,15 @@
+.contact{
+    @apply min-h-screen bg-gray-200 dark:bg-gray-700 w-full flex justify-center items-center pb-[80px] pt-[15px]
+}
+.contact-container{
+    @apply container mx-auto flex flex-wrap justify-center items-center
+}
+.contact-img{
+    @apply w-full h-full md:h-[500px] object-contain mx-auto block
+}
+.contact-title{
+    @apply text-2xl font-bold text-blue-600 dark:text-blue-500 mb-2 font-aceme text-center
+}
+.contact-form-label{
+    @apply peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6
+}
