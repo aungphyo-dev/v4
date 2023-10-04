@@ -1,16 +1,18 @@
 "use client"
-import {useEffect, useState} from "react";
 import anime from "animejs";
-import {About, Hero, Experience, Project} from "@/components";
+import Link from "next/link";
+import {useEffect, useState} from "react";
 import {useRouter} from "next/navigation";
 import supabase from "@/services/supabase";
-const Home = () => {
+import {ProjectsCard} from "@/components";
+
+const Projects = () => {
     const [isLoading,setIsLoading] = useState(true)
     const [projects, setProjects] = useState([])
     const router = useRouter()
     const getData = async ()=>{
         setIsLoading(true)
-        const {data,error} = await supabase.from('projects').select("*").order('id', { ascending: false }).limit(4)
+        const {data,error} = await supabase.from('projects').select("*").order('id', { ascending: false })
         if (error ===null){
             setProjects(data)
             setIsLoading(false)
@@ -18,7 +20,7 @@ const Home = () => {
     }
     useEffect(() => {
         getData()
-        router.prefetch("/projects")
+        router.prefetch("/")
         const effect = document.getElementById("bg-effect");
         const cursor = document.getElementById("cursor");
         const handleMouseMove = (event) => {
@@ -40,8 +42,8 @@ const Home = () => {
                 easing: 'easeOutElastic(1, .8)',
             })
         };
-        window.addEventListener('mousemove', handleMouseMove);
 
+        window.addEventListener('mousemove', handleMouseMove);
         return () => {
             window.removeEventListener(
                 'mousemove',
@@ -49,26 +51,19 @@ const Home = () => {
             );
         };
     }, []);
-    return (
-        <main className='relative w-full'>
+    return(
+        <div className='pt-[20px] min-h-screen w-full p-5 relative'>
             <div className='pointer-events-none fixed inset-0 z-30' id={"bg-effect"}>
                 <div className="cursor cursor--dot" id={"cursor"}></div>
             </div>
-            <div className='w-full min-h-screen' >
-                <div className="progress fixed top-0 right-0 left-0 z-[2000]"></div>
-                <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2">
-                    <div className='h-auto lg:h-screen lg:sticky top-0 flex flex-col justify-start items-center px-5 lg:px-14'>
-                        <Hero/>
-                    </div>
-                    <div className='min-h-screen flex flex-col justify-start items-center px-5 lg:px-16'>
-                        <About/>
-                        <Experience/>
-                        <Project projects={projects}/>
-                    </div>
-                </div>
+            <div className='py-9 sticky top-0'>
+                <Link href={"/"}  className="group mb-2 inline-flex items-center font-semibold leading-tight text-teal-300" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="mr-1 h-4 w-4 rotate-180 transition-transform group-hover:-translate-x-2" aria-hidden="true"><path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd"></path></svg>Typle</Link>
+                <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">All Projects</h1>
             </div>
-        </main>
-    );
-};
-
-export default Home;
+            <ul className="w-full relative group/list">
+                {projects?.map(project=><ProjectsCard key={project.id} project={project}/> )}
+            </ul>
+        </div>
+    )
+}
+export default Projects

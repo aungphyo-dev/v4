@@ -1,12 +1,10 @@
-import {BsGithub} from "react-icons/bs";
-import {FiEye} from "react-icons/fi";
-import {Link} from "react-router-dom";
+import Link from "next/link";
 
-const AllProjectCard = ({project}) => {
+const ProjectsCard = ({project}) => {
     return (
         <li className="mb-12">
-            <Link to={project?.demo} target={"_blank"}
-                className="group cursor-pointer relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100">
+            <div
+                className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100">
                 <div className="z-10 sm:order-2 sm:col-span-6">
                     <h3
                         className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base">
@@ -21,11 +19,14 @@ const AllProjectCard = ({project}) => {
                         </li>)}
                     </ul>
                 </div>
-                <img alt="img" loading="lazy"
-                     className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-                     src={project.image}
-                /></Link>
+                <Link href={project?.demo} target={"_blank"}>
+                    <img alt="img" loading="lazy"
+                         className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
+                         src={`https://otgegesmjkdjmcppbsbl.supabase.co/storage/v1/object/public/projects/images/${project.image}`}
+                    />
+                </Link>
+                </div>
         </li>
     )
 }
-export default AllProjectCard
+export default ProjectsCard

@@ -31,7 +31,7 @@ const Dashboard = () => {
                     Dashboard
                 </Link>
                 <div>
-                    <Link href={"/dashboard/create"}>
+                    <Link href={"/dashboard/create"} className='text-sm bg-blue-500 px-4 py-2 rounded'>
                         Create New Project
                     </Link>
                 </div>
