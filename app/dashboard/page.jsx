@@ -5,6 +5,12 @@ import Link from "next/link";
 import {useRouter} from "next/navigation";
 
 const Dashboard = () => {
+    supabase
+        .channel('any')
+        .on('postgres_changes', { event: '*', schema: '*' }, payload => {
+            console.log('Change received!', payload)
+        })
+        .subscribe()
     const router = useRouter()
     const [projects,setProjects] = useState([])
     const getData = async ()=>{
