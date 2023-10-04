@@ -26,8 +26,8 @@ const Dashboard = () => {
             .remove([`images/${image}`])
         await supabase.from("projects").delete().eq("id",id)
     }
-    const session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
     useEffect(() => {
+        const session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
         getData()
         router.prefetch("/")
         router.prefetch("/dashboard/create")

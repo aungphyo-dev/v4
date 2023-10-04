@@ -6,7 +6,6 @@ import supabase from "@/services/supabase";
 import {useRouter} from "next/navigation";
 const Edit = () => {
     const router = useRouter()
-    const session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
     const [file,setFile] = useState(null)
     const [url,setUrl] = useState(null)
     const handlePhotochange = (e) => {
@@ -25,6 +24,7 @@ const Edit = () => {
         }
     },[file])
     useEffect(() => {
+        const session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
         if (session === null){
             router.replace("/")
         }
