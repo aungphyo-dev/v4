@@ -21,13 +21,13 @@ const Hero = () => {
                             <div
                                 className="mb-5">
                                 <h1 className='hero-pt-1-title'>
-                                    Hi, I&apos;m <span className='text-[#c3a6ff]'>Typle</span> <br/>
+                                    Hi, I am <span className='text-[#c3a6ff]'>Typle</span> <br/>
                                 </h1>
                             </div>
                             <div
                                 className='mb-5'>
                                 <p className='hero-pt-1-paragraph'>
-                                    Experienced junior web developer ready for collaborative projects. Let&apos;s build greatness!🚀
+                                    Experienced junior web developer ready for collaborative projects.
                                 </p>
                             </div>
                             <Navbar/>
