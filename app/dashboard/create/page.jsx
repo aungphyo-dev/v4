@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import {BsPlusSquareFill} from "react-icons/bs";
 import {GrFormClose} from "react-icons/gr";
 import supabase from "@/services/supabase";
-const DProjectForm = () => {
+const Edit = () => {
     const [file,setFile] = useState(null)
     const [url,setUrl] = useState(null)
     const handlePhotochange = (e) => {
@@ -104,4 +104,4 @@ const DProjectForm = () => {
         </form>
     )
 }
-export default DProjectForm
+export default Edit

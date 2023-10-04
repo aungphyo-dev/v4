@@ -19,8 +19,8 @@ const Dashboard = () => {
         router.prefetch("/")
         router.prefetch("/dashboard/create")
         router.prefetch("/dashboard/edit")
-        if (!session){
-            router.push("/dashboard")
+        if (session === null){
+            router.push("/")
         }
     }, []);
 
@@ -53,7 +53,7 @@ const Dashboard = () => {
                             {project?.title}
                         </th>
                         <td className="px-6 py-4 flex">
-                            <div  className="font-medium  text-blue-500 hover:underline mr-2">Edit</div>
+                            <Link href={`/dashboard/edit/${project.id}`}  className="font-medium  text-blue-500 hover:underline mr-2">Edit</Link>
                             <button onClick={async ()=>{
                                 if (confirm("Do you wanna delete this")){
                                 }
