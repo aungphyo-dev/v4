@@ -27,14 +27,10 @@ const Dashboard = () => {
         await supabase.from("projects").delete().eq("id",id)
     }
     useEffect(() => {
-        const session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
         getData()
         router.prefetch("/")
         router.prefetch("/dashboard/create")
         router.prefetch("/dashboard/edit")
-        if (session === null){
-            router.push("/")
-        }
     }, []);
 
     return (

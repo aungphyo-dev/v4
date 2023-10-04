@@ -23,12 +23,6 @@ const Edit = () => {
             imagePreview(file)
         }
     },[file])
-    useEffect(() => {
-        const session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
-        if (session === null){
-            router.replace("/")
-        }
-    }, []);
     const [title,setTitle] = useState("");
     const [demo,setDemo] = useState("");
     const [description,setDescription] = useState("");
