@@ -14,7 +14,7 @@ export default function RootLayout({children}) {
         <html lang="en">
             <body className="w-full bg-slate-900" suppressHydrationWarning={true}>
             {children}
-            <Analytics />
+            <Analytics mode={'production'}/>
             </body>
         </html>
     )
