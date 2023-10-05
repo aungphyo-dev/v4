@@ -1,9 +1,17 @@
 "use client"
-import {useEffect, useState} from "react";
 import anime from "animejs";
-import {About, Hero, Experience, Project} from "@/components";
+import {useEffect, useState} from "react";
 import {useRouter} from "next/navigation";
 import supabase from "@/services/supabase";
+import {About, Hero, Experience, Project, Contact} from "@/components";
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            refetchOnWindowFocus: false, // default: true
+        },
+    },
+})
 const Home = () => {
     const [isLoading,setIsLoading] = useState(true)
     const [projects, setProjects] = useState([])
@@ -52,7 +60,7 @@ const Home = () => {
     return (
         <main className='relative w-full'>
             <div className='pointer-events-none fixed inset-0 z-30' id={"bg-effect"}>
-                <div className="cursor cursor--dot" id={"cursor"}></div>
+                <div className="cursor cursor--dot hidden" id={"cursor"}></div>
             </div>
             <div className='w-full min-h-screen' >
                 <div className="progress fixed top-0 right-0 left-0 z-[2000]"></div>
@@ -64,6 +72,9 @@ const Home = () => {
                         <About/>
                         <Experience/>
                         <Project projects={projects}/>
+                        <QueryClientProvider client={queryClient}>
+                            <Contact/>
+                        </QueryClientProvider>
                     </div>
                 </div>
             </div>
