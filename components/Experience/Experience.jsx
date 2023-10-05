@@ -10,7 +10,7 @@ const Experience = () => {
                 {Experiences.map(experience => <ExperienceCard key={experience.id} experience={experience}/>)}
             </ol>
             <div>
-                <a download href={"#"} className='text-slate-200 hover:underline group'>
+                <a download href={"https://otgegesmjkdjmcppbsbl.supabase.co/storage/v1/object/public/projects/aungpyaephyo.pdf"} className='text-slate-200 hover:underline group'>
                     view my abilities
                     <BsArrowRightShort className=' opacity-0 transition duration-500 ml-1 inline-flex group-hover:opacity-100'/>
                 </a>
