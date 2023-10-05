@@ -5,12 +5,21 @@ import {useRouter} from "next/navigation";
 
 const Login = () => {
     const router = useRouter()
+    useEffect(() => {
+        let session;
+        if (typeof window !== "undefined") {
+            session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
+        }
+        router.prefetch("/")
+        if(session){
+            router.push("/")
+        }
+    }, []);
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
-
     const handleLogin =async (e) => {
       e.preventDefault()
-        const { data, error } = await supabase.auth.signInWithPassword({
+        const { error } = await supabase.auth.signInWithPassword({
             email,
             password
         })

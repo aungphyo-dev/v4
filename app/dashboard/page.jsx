@@ -3,15 +3,26 @@ import React, {useEffect, useState} from 'react';
 import supabase from "@/services/supabase";
 import Link from "next/link";
 import {useRouter} from "next/navigation";
+import authContext from "@/services/context/AuthContext";
 
 const Dashboard = () => {
+    const router = useRouter()
+    useEffect(() => {
+        let session;
+        if (typeof window !== "undefined") {
+            session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
+        }
+        router.prefetch("/")
+        if(!session){
+            router.push("/")
+        }
+    }, []);
     supabase
         .channel('any')
         .on('postgres_changes', { event: '*', schema: '*' }, payload => {
             console.log('Change received!', payload)
         })
         .subscribe()
-    const router = useRouter()
     const [projects,setProjects] = useState([])
     const getData = async ()=>{
         const {data,error} = await supabase.from('projects').select("*").order('id', { ascending: false })
@@ -40,6 +51,12 @@ const Dashboard = () => {
                     Dashboard
                 </Link>
                 <div>
+                    <button className='text-sm bg-blue-500 px-4 py-2 rounded mr-2' onClick={async ()=>{
+                        await supabase.auth.signOut()
+                        router.push("/")
+                    }}>
+                        Logout
+                    </button>
                     <Link href={"/dashboard/create"} className='text-sm bg-blue-500 px-4 py-2 rounded'>
                         Create New Project
                     </Link>
