@@ -37,11 +37,6 @@ const About = () => {
                     can open to a whole new world of understanding. As a firm believer in lifelong learning, I am
                     excited to expand my horizons and continuously grow both as a developer and a language enthusiast.
                 </p>
-                <p className='about-ct-2-para'>
-                    Join me on this exciting adventure as I strive to create exceptional web experiences and uncover the
-                    beauty of language and culture. <span className='text-[#e6f1ff]'>Let&apos;s connect</span>, learn,
-                    and grow together!
-                </p>
             </div>
         </section>
     )
