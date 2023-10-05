@@ -16,7 +16,7 @@ const Dashboard = () => {
         if(!session){
             router.push("/")
         }
-    }, []);
+    }, [router]);
     const dd = supabase
         .channel('any')
         .on('postgres_changes', { event: '*', schema: '*' }, payload => {

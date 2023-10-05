@@ -19,8 +19,10 @@ const Projects = () => {
         }
     }
     useEffect(() => {
-        getData()
         router.prefetch("/")
+    }, [router]);
+    useEffect(() => {
+        getData()
         const effect = document.getElementById("bg-effect");
         const cursor = document.getElementById("cursor");
         const handleMouseMove = (event) => {

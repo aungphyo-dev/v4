@@ -6,6 +6,16 @@ import supabase from "@/services/supabase";
 import {useRouter} from "next/navigation";
 const Create = () => {
     const router = useRouter()
+    useEffect(() => {
+        let session;
+        if (typeof window !== "undefined") {
+            session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
+        }
+        router.prefetch("/")
+        if(!session){
+            router.push("/")
+        }
+    }, [router]);
     const [file,setFile] = useState(null)
     const [url,setUrl] = useState(null)
     const handlePhotochange = (e) => {

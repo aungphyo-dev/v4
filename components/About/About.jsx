@@ -13,7 +13,7 @@ const About = () => {
                     Hello, I am <span className='text-[#e6f1ff]'>Aung Pyae Phyo</span>, a junior web developer based in
                     Mandalay. I am currently part of the talented team at Counter, where I am honing my skills and
                     contributing to innovative web projects with tech stacks that include
-                        <ul className='skill-list text-[#e6f1ff] px-2'>
+                        <ul className='skill-list text-[#e6f1ff] px-5'>
                             <li className='list-item'>TailwindCss</li>
                             <li className='list-item'>Bootstrap</li>
                             <li className='list-item'>Javascript</li>

@@ -3,8 +3,7 @@ import {useEffect, useState} from "react";
 import {BsPlusSquareFill} from "react-icons/bs";
 import {GrFormClose} from "react-icons/gr";
 import supabase from "@/services/supabase";
-import {useParams} from "next/navigation";
-import {get} from "axios";
+import {useParams, useRouter} from "next/navigation";
 const Edit = () => {
     const {id} = useParams()
     const [file,setFile] = useState(null)
@@ -31,6 +30,17 @@ const Edit = () => {
     const [skills,setSkills] = useState([])
     const [loading,setLoading] = useState(false)
     const [image,setImage] = useState(null)
+    const router = useRouter()
+    useEffect(() => {
+        let session;
+        if (typeof window !== "undefined") {
+            session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
+        }
+        router.prefetch("/")
+        if(!session){
+            router.push("/")
+        }
+    }, [router]);
     const getData = async ()=>{
         const {data} = await supabase.from("projects").select("*").eq("id",id)
         setTitle(data[0].title)
