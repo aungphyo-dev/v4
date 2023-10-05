@@ -1,5 +1,6 @@
 import './globals.css'
 import FavPng from "public/fav.png"
+import {Analytics} from "@vercel/analytics/react";
 
 export const metadata = {
     title: 'Typle | developer',
@@ -13,6 +14,7 @@ export default function RootLayout({children}) {
         <html lang="en">
             <body className="w-full bg-slate-900" suppressHydrationWarning={true}>
             {children}
+            <Analytics />
             </body>
         </html>
     )
