@@ -17,7 +17,7 @@ const Dashboard = () => {
             router.push("/")
         }
     }, []);
-    supabase
+    const dd = supabase
         .channel('any')
         .on('postgres_changes', { event: '*', schema: '*' }, payload => {
             console.log('Change received!', payload)
@@ -42,7 +42,7 @@ const Dashboard = () => {
         router.prefetch("/")
         router.prefetch("/dashboard/create")
         router.prefetch("/dashboard/edit")
-    }, []);
+    }, [dd]);
 
     return (
         <div className="relative h-screen shadow-md sm:rounded-lg pb-5">
