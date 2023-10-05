@@ -13,7 +13,7 @@ const Contact = () => {
         const res = await axios.post("https://formspree.io/f/mrgvybye",data)
         return res.data;
     }
-    const {mutate,isLoading,isSuccess,isError} = useMutation({
+    const {mutate,isLoading} = useMutation({
         mutationKey:["post","sendMessage"],
         mutationFn:(data)=>sendMessage(data)
     })
@@ -26,7 +26,7 @@ const Contact = () => {
             message:message
         }
         mutate(FormData)
-        if (!isLoading && isSuccess){
+        if (!isLoading){
             setName("")
             setEmail("")
             setQuestion("")

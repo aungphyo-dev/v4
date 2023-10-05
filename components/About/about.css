@@ -14,3 +14,14 @@
 .about-ct-2-para{
     @apply text-[16px] leading-[26px]  mb-5 text-[#8892b0]
 }
+.skill-list{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0 10px;
+    margin: 20px 0 0;
+
+}
+
+.list-item{
+    @apply before:content-["▹"] before:absolute before:left-[-14px] before:text-[#64ffda]  before:text-[14px] relative
+}
