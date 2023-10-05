@@ -57,7 +57,7 @@ const Dashboard = () => {
                     }}>
                         Logout
                     </button>
-                    <Link href={"/dashboard/create"} className='text-sm bg-blue-500 px-4 py-2 rounded'>
+                    <Link href={"/auth/dashboard/create"} className='text-sm bg-blue-500 px-4 py-2 rounded'>
                         Create New Project
                     </Link>
                 </div>
@@ -79,7 +79,7 @@ const Dashboard = () => {
                             {project?.title}
                         </th>
                         <td className="px-6 py-4 flex">
-                            <Link href={`/dashboard/edit/${project.id}`}  className="font-medium  text-blue-500 hover:underline mr-2">Edit</Link>
+                            <Link href={`/auth/dashboard/edit/${project.id}`}  className="font-medium  text-blue-500 hover:underline mr-2">Edit</Link>
                             <button onClick={()=>{
                                 if (confirm("Do you wanna delete this")){
                                     deleteData(project.id,project.image)

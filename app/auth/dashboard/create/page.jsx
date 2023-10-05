@@ -4,7 +4,7 @@ import {BsPlusSquareFill} from "react-icons/bs";
 import {GrFormClose} from "react-icons/gr";
 import supabase from "@/services/supabase";
 import {useRouter} from "next/navigation";
-const Edit = () => {
+const Create = () => {
     const router = useRouter()
     const [file,setFile] = useState(null)
     const [url,setUrl] = useState(null)
@@ -106,4 +106,4 @@ const Edit = () => {
         </form>
     )
 }
-export default Edit
+export default Create
