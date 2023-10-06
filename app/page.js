@@ -56,7 +56,7 @@ const Home = () => {
                 handleMouseMove
             );
         };
-    }, []);
+    }, [router]);
     return (
         <main className='relative w-full'>
             <div className='pointer-events-none fixed inset-0 z-30' id={"bg-effect"}>

@@ -42,7 +42,7 @@ const Dashboard = () => {
         router.prefetch("/")
         router.prefetch("/dashboard/create")
         router.prefetch("/dashboard/edit")
-    }, [dd]);
+    }, [dd,router]);
 
     return (
         <div className="relative h-screen shadow-md sm:rounded-lg pb-5">
