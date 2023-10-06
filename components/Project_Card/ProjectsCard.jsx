@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const ProjectsCard = ({project}) => {
     return (
-        <li className="mb-12">
+        <li className="mb-12 max-w-[650px]">
             <div
                 className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100">
                 <div className="z-10 sm:order-2 sm:col-span-6">
@@ -19,11 +20,14 @@ const ProjectsCard = ({project}) => {
                         </li>)}
                     </ul>
                 </div>
-                <Link href={project?.demo} target={"_blank"}>
-                    <img alt="img" loading="lazy"
-                         className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-                         src={`https://otgegesmjkdjmcppbsbl.supabase.co/storage/v1/object/public/projects/images/${project.image}`}
-                    />
+                <Link className="relative rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 min-h-[160px] md:min-h-[74px] md:max-h-[75px]  overflow-hidden" href={project?.demo} target={"_blank"}>
+                        <Image
+                            fill
+                            style={{
+                                objectFit: 'cover',
+                            }}
+                            src={`https://otgegesmjkdjmcppbsbl.supabase.co/storage/v1/object/public/projects/images/${project.image}`}
+                            alt={"IMAGE"}/>
                 </Link>
                 </div>
         </li>
