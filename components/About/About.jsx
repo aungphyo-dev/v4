@@ -26,6 +26,8 @@ const About = () => {
                             <li className='list-item'>Java</li>
                             <li className='list-item'>PHP</li>
                             <li className='list-item'>Laravel</li>
+                            <li className='list-item'>MySql</li>
+                            <li className='list-item'>Postgresql</li>
                         </ul>
                     <br/>
                     I am passionate about crafting seamless and captivating online experiences.
