@@ -24,7 +24,7 @@ const Login = () => {
             password
         })
         if(error === null){
-            router.push("/dashboard")
+            router.push("/auth/dashboard")
         }
     }
     return (
