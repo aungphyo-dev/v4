@@ -40,8 +40,8 @@ const Dashboard = () => {
     useEffect(() => {
         getData()
         router.prefetch("/")
-        router.prefetch("/dashboard/create")
-        router.prefetch("/dashboard/edit")
+        router.prefetch("/auth/dashboard/create")
+        router.prefetch("/auth/dashboard/edit")
     }, [dd,router]);
 
     return (
