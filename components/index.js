@@ -7,4 +7,5 @@ import ProjectsCard from "@/components/Project_Card/ProjectsCard";
 import ProjectCard from "@/components/Project_Card/ProjectCard";
 import Contact from "@/components/Contact/Contact";
 import LoadingIcon from "@/components/Loading/LoadingIcon";
-export {Hero,About,Experience,Project,ExperienceCard,ProjectCard,ProjectsCard,Contact,LoadingIcon}
+import AnimeC from "@/components/AnimateScreen/AnimeC";
+export {Hero,About,Experience,Project,ExperienceCard,ProjectCard,ProjectsCard,Contact,LoadingIcon,AnimeC}

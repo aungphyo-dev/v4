@@ -3,7 +3,7 @@ import anime from "animejs";
 import {useEffect, useState} from "react";
 import {useRouter} from "next/navigation";
 import supabase from "@/services/supabase";
-import {About, Hero, Experience, Project, Contact} from "@/components";
+import {About, Hero, Experience, Project, Contact, AnimeC} from "@/components";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -25,43 +25,12 @@ const Home = () => {
         }
     }
     useEffect(() => {
-        getData()
+        getData().then()
         router.prefetch("/projects")
-        const effect = document.getElementById("bg-effect");
-        const cursor = document.getElementById("cursor");
-        const handleMouseMove = (event) => {
-            anime({
-                targets: effect,
-                direction: 'linear',
-                easing: 'linear',
-                duration:0,
-                delay:0,
-                background: `radial-gradient(600px at ${event.clientX}px ${event.clientY}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
-            });
-            anime({
-                targets:cursor,
-                translateX:event.clientX,
-                translateY:event.clientY,
-                duration: 1000,
-                delay:0,
-                direction: 'linear',
-                easing: 'easeOutElastic(1, .8)',
-            })
-        };
-        window.addEventListener('mousemove', handleMouseMove);
-
-        return () => {
-            window.removeEventListener(
-                'mousemove',
-                handleMouseMove
-            );
-        };
     }, [router]);
     return (
         <main className='relative w-full'>
-            <div className='pointer-events-none fixed inset-0 z-30' id={"bg-effect"}>
-                <div className="cursor--dot hidden lg:block" id={"cursor"}></div>
-            </div>
+            <AnimeC/>
             <div className='w-full min-h-screen' >
                 <div className="progress fixed top-0 right-0 left-0 z-[2000]"></div>
                 <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2">
