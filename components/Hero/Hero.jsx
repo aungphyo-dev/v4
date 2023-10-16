@@ -1,6 +1,6 @@
 import './hero.css'
 import {AiFillHeart} from 'react-icons/ai'
-import { BiLogoGithub, BiLogoInstagram} from 'react-icons/bi'
+import {BiLogoGithub, BiLogoInstagram, BiLogoTwitter} from 'react-icons/bi'
 import {FaFacebookSquare} from "react-icons/fa";
 import Navbar from "@/components/Navbar/Navbar";
 
@@ -54,6 +54,11 @@ const Hero = () => {
                                        href="https://www.instagram.com/aungpyaephyo1412/"
                                        className='font-bold text-3xl hover:text-slate-200 transition-colors duration-500 text-slate-400'>
                                         <BiLogoInstagram/>
+                                    </a>
+                                    <a  target="blank" rel="noreferrer"
+                                        href="https://twitter.com/typle_x"
+                                        className='font-bold text-3xl hover:text-slate-200 transition-colors duration-500 text-slate-400'>
+                                        <BiLogoTwitter/>
                                     </a>
                                 </div>
                             </div>
