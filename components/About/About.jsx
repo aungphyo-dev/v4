@@ -14,16 +14,12 @@ const About = () => {
                     Mandalay. I am currently part of the talented team at Counter, where I am honing my skills and
                     contributing to innovative web projects with tech stacks that include
                         <ul className='skill-list text-[#e6f1ff] px-5'>
-                            <li className='list-item'>TailwindCss</li>
-                            <li className='list-item'>Bootstrap</li>
-                            <li className='list-item'>Javascript</li>
                             <li className='list-item'>Typescript</li>
                             <li className='list-item'>ReactJS</li>
                             <li className='list-item'>ReactNative</li>
                             <li className='list-item'>NextJS</li>
                             <li className='list-item'>Firebase</li>
                             <li className='list-item'>Supabase</li>
-                            <li className='list-item'>Java</li>
                             <li className='list-item'>PHP</li>
                             <li className='list-item'>Laravel</li>
                             <li className='list-item'>MySql</li>
