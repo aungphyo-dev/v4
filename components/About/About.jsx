@@ -13,18 +13,18 @@ const About = () => {
                     Hello, I am <span className='text-[#e6f1ff]'>Aung Pyae Phyo</span>, a junior web developer based in
                     Mandalay. I am currently part of the talented team at Counter, where I am honing my skills and
                     contributing to innovative web projects with tech stacks that include
-                        <ul className='skill-list text-[#e6f1ff] px-5'>
-                            <li className='list-item'>Typescript</li>
-                            <li className='list-item'>ReactJS</li>
-                            <li className='list-item'>ReactNative</li>
-                            <li className='list-item'>NextJS</li>
-                            <li className='list-item'>Firebase</li>
-                            <li className='list-item'>Supabase</li>
-                            <li className='list-item'>PHP</li>
-                            <li className='list-item'>Laravel</li>
-                            <li className='list-item'>MySql</li>
-                            <li className='list-item'>Postgresql</li>
-                        </ul>
+                    <ul className='skill-list text-[#e6f1ff] px-5'>
+                        <li className='list-item'>Javascript</li>
+                        <li className='list-item'>ReactJS</li>
+                        <li className='list-item'>ReactNative</li>
+                        <li className='list-item'>NextJS</li>
+                        <li className='list-item'>Firebase</li>
+                        <li className='list-item'>Supabase</li>
+                        <li className='list-item'>PHP</li>
+                        <li className='list-item'>Laravel</li>
+                        <li className='list-item'>MySql</li>
+                        <li className='list-item'>Postgresql</li>
+                    </ul>
                     <br/>
                     I am passionate about crafting seamless and captivating online experiences.
                 </div>
