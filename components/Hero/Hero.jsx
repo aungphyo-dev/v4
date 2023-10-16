@@ -3,7 +3,6 @@ import {AiFillHeart} from 'react-icons/ai'
 import { BiLogoGithub, BiLogoInstagram} from 'react-icons/bi'
 import {FaFacebookSquare} from "react-icons/fa";
 import Navbar from "@/components/Navbar/Navbar";
-import Link from "next/link";
 
 const Hero = () => {
     return (
@@ -21,7 +20,7 @@ const Hero = () => {
                             </div>
                             <div
                                 className="mb-5">
-                                <Link href={"/"} className="group/typle inline-flex font-semibold lg:text-slate-200 hero-pt-1-title">
+                                <div className="cursor-pointer group/typle inline-flex font-semibold lg:text-slate-200 hero-pt-1-title">
                                     <span className="sr-only">Typle</span>
                                     <span className="group-hover/typle:text-red-400 transition duration-75 group-hover/typle:-translate-y-px delay-[50ms]" aria-hidden="true">T</span>
                                     <span className="group-hover/typle:text-orange-400 transition duration-75 group-hover/typle:-translate-y-px delay-[75ms]" aria-hidden="true">Y</span>
@@ -32,7 +31,7 @@ const Hero = () => {
                                     <span className="group-hover/typle:text-cyan-400 transition duration-75 group-hover/typle:-translate-y-px delay-[200ms]" aria-hidden="true">A</span>
                                     <span className="group-hover/typle:text-sky-400 transition duration-75 group-hover/typle:-translate-y-px delay-[225ms]" aria-hidden="true">P</span>
                                     <span className="group-hover/typle:text-blue-400 transition duration-75 group-hover/typle:-translate-y-px delay-[250ms]" aria-hidden="true">2</span>
-                                </Link>
+                                </div>
                             </div>
                             <div
                                 className='mb-5'>
