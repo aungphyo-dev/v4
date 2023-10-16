@@ -3,10 +3,11 @@ import {AiFillHeart} from 'react-icons/ai'
 import { BiLogoGithub, BiLogoInstagram} from 'react-icons/bi'
 import {FaFacebookSquare} from "react-icons/fa";
 import Navbar from "@/components/Navbar/Navbar";
+import Link from "next/link";
 
 const Hero = () => {
     return (
-        <section className='hero-session pt-[15px] lg:pt-[35px]'  id="home">
+        <section className='hero-session pt-[15px] lg:pt-[5rem]'  id="home">
                         <div className="hero-pt-1">
                             <div
                                 className='mb-3'>
@@ -20,13 +21,22 @@ const Hero = () => {
                             </div>
                             <div
                                 className="mb-5">
-                                <h1 className='hero-pt-1-title'>
-                                    Hi, I am <span className='text-[#c3a6ff]'>Typle</span> <br/>
-                                </h1>
+                                <Link href={"/"} className="group/typle inline-flex font-semibold lg:text-slate-200 hero-pt-1-title">
+                                    <span className="sr-only">Typle</span>
+                                    <span className="group-hover/typle:text-red-400 transition duration-75 group-hover/typle:-translate-y-px delay-[50ms]" aria-hidden="true">T</span>
+                                    <span className="group-hover/typle:text-orange-400 transition duration-75 group-hover/typle:-translate-y-px delay-[75ms]" aria-hidden="true">Y</span>
+                                    <span className="group-hover/typle:text-yellow-400 transition duration-75 group-hover/typle:-translate-y-px delay-[100ms]" aria-hidden="true">P</span>
+                                    <span className="group-hover/typle:text-lime-400 transition duration-75 group-hover/typle:-translate-y-px delay-[125ms]" aria-hidden="true">L</span>
+                                    <span className="group-hover/typle:text-green-400 transition duration-75 group-hover/typle:-translate-y-px delay-[150ms]" aria-hidden="true">E</span>
+                                    <span className="group-hover/typle:text-teal-400 transition duration-75 group-hover/typle:-translate-y-px delay-[175ms]" aria-hidden="true">&nbsp;</span>
+                                    <span className="group-hover/typle:text-cyan-400 transition duration-75 group-hover/typle:-translate-y-px delay-[200ms]" aria-hidden="true">A</span>
+                                    <span className="group-hover/typle:text-sky-400 transition duration-75 group-hover/typle:-translate-y-px delay-[225ms]" aria-hidden="true">P</span>
+                                    <span className="group-hover/typle:text-blue-400 transition duration-75 group-hover/typle:-translate-y-px delay-[250ms]" aria-hidden="true">2</span>
+                                </Link>
                             </div>
                             <div
                                 className='mb-5'>
-                                <p className='hero-pt-1-paragraph'>
+                                <p className='hero-pt-1-paragraph max-w-sm'>
                                     Experienced junior web developer ready for collaborative projects.
                                 </p>
                             </div>

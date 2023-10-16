@@ -7,13 +7,6 @@ export default {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    container: {
-      padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '6rem',
-      },
-    },
     extend: {
       animation:{
         'spin-slow': 'spin 4s linear infinite',
