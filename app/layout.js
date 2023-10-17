@@ -1,10 +1,10 @@
 import './globals.css'
 import FavPng from "public/fav.png"
 import {Analytics} from "@vercel/analytics/react";
-import { Poppins } from "next/font/google";
-const poppins = Poppins ({
-    subsets: ["latin"],
-    weight: ["100", "300", "500", "600", "700", "800"],
+import {Inter} from "next/font/google";
+const inter = Inter ({
+    weight: ["400", "500", "700", "900"],
+    subsets: ["latin"]
 });
 export const metadata = {
     title: 'Typle | developer',
@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-            <body className={`${poppins.className} w-full bg-slate-900`} suppressHydrationWarning={true}>
+            <body className={`${inter.className} w-full bg-slate-900`} suppressHydrationWarning={true}>
             {children}
             <Analytics mode={'production'}/>
             </body>
