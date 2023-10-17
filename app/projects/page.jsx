@@ -1,7 +1,6 @@
 "use client"
-import anime from "animejs";
 import Link from "next/link";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {useRouter} from "next/navigation";
 import {AnimeC, ProjectsCard} from "@/components";
 import useProjectContext from "@/components/Context/ProjectsContext";
