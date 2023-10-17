@@ -6,10 +6,12 @@ const ExperienceCard = ({experience}) => {
               <div
                   className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
               <header
-                  className="z-10 mb-2 mt-1 text-[10px] font-semibold uppercase tracking-wide text-slate-500 sm:col-span-3">
-                  {experience.duration}
+                  className="z-10 flex flex-col gap-y-1 mb-2 mt-1 text-[10px] font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2">
+                  <span>{experience.durationStart}</span>
+                  <span className='ps-7'>&#8693;</span>
+                  <span>{experience.durationEnd}</span>
               </header>
-              <div className="z-10 sm:col-span-5">
+              <div className="z-10 sm:col-span-6">
                   <h3 className="font-medium leading-snug text-slate-200">
                       <div>
                           <div
