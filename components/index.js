@@ -12,6 +12,4 @@ import AnimeC from "@/components/AnimateScreen/AnimeC";
 import NavigateLink from "@/components/Link/NavigateLink";
 import SocialLink from "@/components/Link/SocialLink";
 import Footer from "@/components/Footer/Footer";
-
-import Loading from "@/components/Loading/Loading";
-export {Navbar,Hero,About,Experience,Project,ExperienceCard,ProjectCard,ProjectsCard,Contact,LoadingIcon,AnimeC,Footer,NavigateLink,SocialLink,Loading}
+export {Navbar,Hero,About,Experience,Project,ExperienceCard,ProjectCard,ProjectsCard,Contact,LoadingIcon,AnimeC,Footer,NavigateLink,SocialLink}

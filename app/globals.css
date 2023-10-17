@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.cursor--dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 100%;
-    background: white;
-}
-
 .active .nav-indicator{
     width: 4rem;
     background: rgb(226,232,240);
