@@ -30,6 +30,7 @@ const ProjectCard = ({project}) => {
                     className="relative rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 min-h-[160px] md:min-h-[74px] md:max-h-[75px] overflow-hidden">
                     <Image
                         fill
+                        priority
                         sizes={"500"}
                         style={{
                             objectFit: 'cover',

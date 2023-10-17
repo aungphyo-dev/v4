@@ -24,6 +24,7 @@ const ProjectsCard = ({project}) => {
                         <Image
                             sizes={"500"}
                             fill
+                            priority
                             style={{
                                 objectFit: 'cover',
                             }}
