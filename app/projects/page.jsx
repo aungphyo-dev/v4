@@ -3,27 +3,15 @@ import anime from "animejs";
 import Link from "next/link";
 import {useEffect, useState} from "react";
 import {useRouter} from "next/navigation";
-import supabase from "@/services/supabase";
 import {AnimeC, ProjectsCard} from "@/components";
+import useProjectContext from "@/components/Context/ProjectsContext";
 
 const Projects = () => {
-    const [isLoading,setIsLoading] = useState(true)
-    const [projects, setProjects] = useState([])
     const router = useRouter()
-    const getData = async ()=>{
-        setIsLoading(true)
-        const {data,error} = await supabase.from('projects').select("*").order('id', { ascending: false })
-        if (error ===null){
-            setProjects(data)
-            setIsLoading(false)
-        }
-    }
     useEffect(() => {
         router.prefetch("/")
     }, [router]);
-    useEffect(() => {
-        getData()
-    }, []);
+    const {projects} = useProjectContext();
     return(
         <div className='pt-[20px] min-h-screen w-full relative'>
             <AnimeC/>
