@@ -21,6 +21,8 @@ export default function RootLayout({children}) {
         <head>
             <title>Typle | Developer</title>
             <link rel="shortcut icon" href="/fav.png" />
+            <meta name="title" content="Typle | Developer" />
+            <meta name="description" content="Generate with Next JS................." />
         </head>
             <body className={`${inter.className} w-full bg-slate-900`} suppressHydrationWarning>
            <QueryClientProvider client={queryClient}>
