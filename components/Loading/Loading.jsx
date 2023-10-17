@@ -2,7 +2,7 @@ import React from 'react';
 import "./loading.css"
 const Loading = () => {
     return (
-        <div className='max-w-screen-2xl mx-auto w-full h-screen flex justify-center items-center loading'>
+        <div className='max-w-screen-2xl mx-auto w-full h-screen flex gap-x-2 justify-center items-center loading'>
             <div className="f-world">
                 L
             </div>
