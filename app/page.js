@@ -1,8 +1,16 @@
 "use client"
 import {useEffect, useState} from "react";
 import {useRouter} from "next/navigation";
-import {About, AnimeC, Contact, Experience, Footer, Hero, Project} from "@/components";
 import supabase from "@/services/supabase";
+import {About, AnimeC, Contact, Experience, Footer, Hero, Project} from "@/components";
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            refetchOnWindowFocus: false, // default: true
+        },
+    },
+})
 const Home = () => {
     const [projects, setProjects] = useState([])
     const router = useRouter()
@@ -32,7 +40,9 @@ const Home = () => {
                         <About/>
                         <Experience/>
                         <Project projects={projects}/>
-                        <Contact/>
+                        <QueryClientProvider client={queryClient}>
+                            <Contact/>
+                        </QueryClientProvider>
                         <Footer/>
                     </div>
                 </div>
