@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar/Navbar";
 import Hero from '@/components/Hero/Hero'
 import About from "@/components/About/About";
 import Experience from "@/components/Experience/Experience";
@@ -8,4 +9,6 @@ import ProjectCard from "@/components/Project_Card/ProjectCard";
 import Contact from "@/components/Contact/Contact";
 import LoadingIcon from "@/components/Loading/LoadingIcon";
 import AnimeC from "@/components/AnimateScreen/AnimeC";
-export {Hero,About,Experience,Project,ExperienceCard,ProjectCard,ProjectsCard,Contact,LoadingIcon,AnimeC}
+import NavigateLink from "@/components/Link/NavigateLink";
+import SocialLink from "@/components/Link/SocialLink";
+export {Navbar,Hero,About,Experience,Project,ExperienceCard,ProjectCard,ProjectsCard,Contact,LoadingIcon,AnimeC,NavigateLink,SocialLink}

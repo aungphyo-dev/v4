@@ -1,8 +1,6 @@
 import './hero.css'
 import {AiFillHeart} from 'react-icons/ai'
-import {BiLogoGithub, BiLogoInstagram, BiLogoTwitter} from 'react-icons/bi'
-import {FaFacebookSquare} from "react-icons/fa";
-import Navbar from "@/components/Navbar/Navbar";
+import {SocialLink,Navbar} from "@/components";
 
 const Hero = () => {
     return (
@@ -42,24 +40,10 @@ const Hero = () => {
                             <Navbar/>
                             <div>
                                 <div className='flex justify-center items-center space-x-4'>
-                                    <a target="blank" rel="noreferrer" href="https://www.facebook.com/aungpyaephyo1412"
-                                       className='font-bold text-2xl hover:text-slate-200 transition-colors duration-500 text-slate-400'>
-                                        <FaFacebookSquare/>
-                                    </a>
-                                    <a target="blank" rel="noreferrer" href="https://github.com/typle"
-                                       className='font-bold text-3xl hover:text-slate-200 transition-colors duration-500 text-slate-400'>
-                                        <BiLogoGithub/>
-                                    </a>
-                                    <a target="blank" rel="noreferrer"
-                                       href="https://www.instagram.com/aungpyaephyo1412/"
-                                       className='font-bold text-3xl hover:text-slate-200 transition-colors duration-500 text-slate-400'>
-                                        <BiLogoInstagram/>
-                                    </a>
-                                    <a  target="blank" rel="noreferrer"
-                                        href="https://twitter.com/typle_x"
-                                        className='font-bold text-3xl hover:text-slate-200 transition-colors duration-500 text-slate-400'>
-                                        <BiLogoTwitter/>
-                                    </a>
+                                    <SocialLink link="https://www.github.com/typle/" icon={"github"}/>
+                                    <SocialLink link="https://www.instagram.com/aungpyaephyo1412/" icon={"instagram"}/>
+                                    <SocialLink link="https://www.twitter.com/typle_x/" icon={"twitter"}/>
+                                    <SocialLink link="https://www.facebook.com/aungpyaephyo1412/" icon={"facebook"}/>
                                 </div>
                             </div>
                         </div>

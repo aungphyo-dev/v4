@@ -4,6 +4,7 @@ import ProjectCard from "@/components/Project_Card/ProjectCard";
 import Link from "next/link";
 import {useRouter} from "next/navigation";
 import {useEffect} from "react";
+import {NavigateLink} from "@/components";
 
 
 const Project = ({projects}) => {
@@ -18,10 +19,7 @@ const Project = ({projects}) => {
                 {projects?.map(project=><ProjectCard key={project.id} project={project}/> )}
             </ul>
             <div>
-                <Link href={"/projects"}  className='text-slate-200 hover:underline group'>
-                    view all my projects
-                    <BsArrowRightShort className=' opacity-0 transition duration-500 ml-1 inline-flex group-hover:opacity-100'/>
-                </Link>
+                <NavigateLink download={false} link={"/projects"} content={"view all my projects"}/>
             </div>
         </div>
 )

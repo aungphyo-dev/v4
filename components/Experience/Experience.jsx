@@ -1,6 +1,6 @@
 import {BsArrowRightShort} from "react-icons/bs";
 import Experiences from "@/DB/Experiences";
-import {ExperienceCard} from "@/components";
+import {ExperienceCard, NavigateLink} from "@/components";
 
 const Experience = () => {
     return (
@@ -10,10 +10,7 @@ const Experience = () => {
                 {Experiences.map(experience => <ExperienceCard key={experience.id} experience={experience}/>)}
             </ol>
             <div>
-                <a download href={"https://otgegesmjkdjmcppbsbl.supabase.co/storage/v1/object/public/projects/aungpyaephyo.pdf"} className='text-slate-200 hover:underline group'>
-                    view my abilities
-                    <BsArrowRightShort className=' opacity-0 transition duration-500 ml-1 inline-flex group-hover:opacity-100'/>
-                </a>
+                <NavigateLink content={"view all my abilities"} download={true} link={"https://otgegesmjkdjmcppbsbl.supabase.co/storage/v1/object/public/projects/aungpyaephyo.pdf"}/>
             </div>
         </div>
     )
