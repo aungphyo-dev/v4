@@ -8,10 +8,7 @@ const Home = () => {
     useEffect(() => {
         router.prefetch("/projects")
     }, [router]);
-    const {isLoading,projects} = useProjectContext();
-    if (isLoading){
-        return  <Loading/>
-    }else {
+    const {projects} = useProjectContext();
     return (
         <main className='relative w-full'>
             <AnimeC/>
@@ -32,7 +29,7 @@ const Home = () => {
                 </div>
             </div>
         </main>
-    );}
+    );
 };
 
 export default Home;
