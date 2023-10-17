@@ -11,4 +11,5 @@ import LoadingIcon from "@/components/Loading/LoadingIcon";
 import AnimeC from "@/components/AnimateScreen/AnimeC";
 import NavigateLink from "@/components/Link/NavigateLink";
 import SocialLink from "@/components/Link/SocialLink";
-export {Navbar,Hero,About,Experience,Project,ExperienceCard,ProjectCard,ProjectsCard,Contact,LoadingIcon,AnimeC,NavigateLink,SocialLink}
+import Footer from "@/components/Footer/Footer";
+export {Navbar,Hero,About,Experience,Project,ExperienceCard,ProjectCard,ProjectsCard,Contact,LoadingIcon,AnimeC,Footer,NavigateLink,SocialLink}

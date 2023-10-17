@@ -1,9 +1,8 @@
 "use client"
-import anime from "animejs";
 import {useEffect, useState} from "react";
 import {useRouter} from "next/navigation";
 import supabase from "@/services/supabase";
-import {About, Hero, Experience, Project, Contact, AnimeC} from "@/components";
+import {About, Hero, Experience, Project, Contact, AnimeC,Footer} from "@/components";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -44,6 +43,7 @@ const Home = () => {
                         <QueryClientProvider client={queryClient}>
                             <Contact/>
                         </QueryClientProvider>
+                        <Footer/>
                     </div>
                 </div>
             </div>
