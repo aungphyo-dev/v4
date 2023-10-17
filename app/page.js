@@ -9,7 +9,7 @@ const Home = () => {
         router.prefetch("/projects")
     }, [router]);
     const {isLoading,projects} = useProjectContext();
-    if (true){
+    if (isLoading){
         return  <Loading/>
     }else {
     return (
