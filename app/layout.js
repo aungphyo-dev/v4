@@ -2,7 +2,6 @@
 import './globals.css'
 import {Inter} from "next/font/google";
 import {Analytics} from "@vercel/analytics/react";
-import {ProjectsContextProvider} from "@/components";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 const inter = Inter ({
     weight: ["400", "500", "700", "900"],
@@ -26,9 +25,7 @@ export default function RootLayout({children}) {
         </head>
             <body className={`${inter.className} w-full bg-slate-900`} suppressHydrationWarning>
            <QueryClientProvider client={queryClient}>
-               <ProjectsContextProvider>
                    {children}
-               </ProjectsContextProvider>
            </QueryClientProvider>
             <Analytics mode={'production'}/>
             </body>

@@ -1,14 +1,23 @@
 "use client"
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {useRouter} from "next/navigation";
-import {About, AnimeC, Contact, Experience, Footer, Hero, Project,Loading} from "@/components";
-import useProjectContext from "@/components/Context/ProjectsContext";
+import {About, AnimeC, Contact, Experience, Footer, Hero, Project} from "@/components";
+import supabase from "@/services/supabase";
 const Home = () => {
+    const [projects, setProjects] = useState([])
     const router = useRouter()
     useEffect(() => {
         router.prefetch("/projects")
     }, [router]);
-    const {projects} = useProjectContext();
+    const getData = async ()=>{
+        const {data,error} = await supabase.from('projects').select("*").order('id', { ascending: false }).limit(4)
+        if (error ===null){
+            setProjects(data)
+        }
+    }
+    useEffect(() => {
+        getData().then()
+    }, []);
     return (
         <main className='relative w-full'>
             <AnimeC/>
