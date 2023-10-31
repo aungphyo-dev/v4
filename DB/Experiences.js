@@ -9,7 +9,7 @@ const Experiences = [
   },
   {
     "id" : 2,
-    "title" : "Frontend Developer[Internship]",
+    "title" : "Frontend Developer [Internship]",
     "description" : "I work at Myanmar Media Linkage  in November 1, 2023 as Frontend developer(Internship).",
     "durationStart" : "November 1, 2023",
     "durationEnd" : "Present",
