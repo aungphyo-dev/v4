@@ -1,20 +1,11 @@
 "use client"
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import supabase from "@/services/supabase";
 import {useRouter} from "next/navigation";
+import {setCookie} from "cookies-next";
 
 const Login = () => {
     const router = useRouter()
-    useEffect(() => {
-        let session;
-        if (typeof window !== "undefined") {
-            session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
-        }
-        router.prefetch("/")
-        if(session){
-            router.push("/")
-        }
-    }, [router]);
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
     const handleLogin =async (e) => {
@@ -24,6 +15,7 @@ const Login = () => {
             password
         })
         if(error === null){
+            setCookie("auth",true)
             router.push("/auth/dashboard")
         }
     }

@@ -3,20 +3,10 @@ import React, {useEffect, useState} from 'react';
 import supabase from "@/services/supabase";
 import Link from "next/link";
 import {useRouter} from "next/navigation";
-import authContext from "@/services/context/AuthContext";
+import {deleteCookie} from "cookies-next";
 
 const Dashboard = () => {
     const router = useRouter()
-    useEffect(() => {
-        let session;
-        if (typeof window !== "undefined") {
-            session = localStorage.getItem("sb-otgegesmjkdjmcppbsbl-auth-token")
-        }
-        router.prefetch("/")
-        if(!session){
-            router.push("/")
-        }
-    }, [router]);
     const dd = supabase
         .channel('any')
         .on('postgres_changes', { event: '*', schema: '*' }, payload => {
@@ -54,6 +44,7 @@ const Dashboard = () => {
                     <button className='text-sm bg-blue-500 px-4 py-2 rounded mr-2' onClick={async ()=>{
                         await supabase.auth.signOut()
                         router.push("/")
+                        deleteCookie("auth")
                     }}>
                         Logout
                     </button>
