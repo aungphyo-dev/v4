@@ -1,8 +1,8 @@
 const Experiences = [
   {
     "id" : 1,
-    "title" : "Frontend Developer - [ Internship ]",
-    "description" : "I work at Myanmar Media Linkage  in November 1, 2023 as Frontend developer(Internship).",
+    "title" : "Frontend Developer",
+    "description" : "I work at Myanmar Media Linkage  in November 1, 2023 as Frontend developer.",
     "durationStart" : "November 1, 2023",
     "durationEnd" : "Present",
     "skills" : ["Typescript","ReactJS","Redux","NextJS","ReactQuery"]

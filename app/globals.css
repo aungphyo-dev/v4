@@ -11,24 +11,11 @@
 }
 
 ::-webkit-scrollbar {
-    width: 4px;
     display: none;
 }
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    overflow: hidden;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #562aac;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #160e56;
+*{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .progress {
