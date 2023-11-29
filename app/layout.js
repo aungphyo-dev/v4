@@ -9,7 +9,7 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-            <body className={`${GeistSans.className} w-full bg-slate-900`} suppressHydrationWarning>
+            <body className={`${GeistSans.className} w-full bg-slate-950`} suppressHydrationWarning>
             {children}
             <Analytics mode={'production'}/>
             </body>
