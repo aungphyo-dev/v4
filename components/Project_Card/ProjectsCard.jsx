@@ -11,7 +11,7 @@ const ProjectsCard = ({project}) => {
                         className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base">
                         <span>{project?.title}</span>
                     </h3>
-                    <p className="mt-2 text-sm leading-normal text-slate-300">{project.description}</p>
+                    <p className="mt-2 text-sm leading-normal text-slate-300/50">{project.description}</p>
                     <ul className="mt-2 flex flex-wrap">
                         {project.skills.map(skill=><li key={skill} className="mr-1.5 mt-2">
                             <div

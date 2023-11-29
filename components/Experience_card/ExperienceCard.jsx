@@ -22,7 +22,7 @@ const ExperienceCard = ({experience}) => {
                           </div>
                       </div>
                   </h3>
-                  <p className="mt-2 text-sm leading-normal text-[#5eead4]">
+                  <p className="mt-2 text-sm leading-normal text-slate-300/50">
                       {experience.description}
                   </p>
                   <ul className="mt-2 flex flex-wrap">
