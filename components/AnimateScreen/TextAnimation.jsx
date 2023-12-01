@@ -5,7 +5,7 @@ export default function TextAnimation({paragraph}) {
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
-        offset: ["start 155px", "end 50px"]
+        offset: ["start 155px", "end 150px"]
     })
     const words = paragraph.split(" ")
     return (
