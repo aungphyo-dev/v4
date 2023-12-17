@@ -21,8 +21,7 @@ const Login = () => {
     }
     return (
         <section className='min-h-screen w-full flex justify-center items-center'>
-            <div className="relative w-full max-w-md max-h-full">
-                <div className="relative  rounded-lg shadow bg-slate-900 shadow-white">
+                <div className="rounded-lg shadow bg-slate-900 shadow-white">
                     <div className="px-3 py-6 lg:px-8">
                         <h3 className="mb-4 text-xl font-medium  text-white text-center">Sign in to your admin account</h3>
                         <form onSubmit={handleLogin} className="space-y-6">
@@ -38,7 +37,6 @@ const Login = () => {
                         </form>
                     </div>
                 </div>
-            </div>
         </section>
     );
 };
