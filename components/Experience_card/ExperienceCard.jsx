@@ -1,6 +1,6 @@
 const ExperienceCard = ({experience}) => {
   return(
-      <li className="mb-12 cursor-pointer">
+      <li className="mb-12 cursor-pointer group relative transition-all lg:hover:!opacity-100 lg:group-hover/card:opacity-50">
           <div
               className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100">
               <div
@@ -22,7 +22,7 @@ const ExperienceCard = ({experience}) => {
                           </div>
                       </div>
                   </h3>
-                  <p className="mt-2 text-sm leading-normal text-slate-300/50">
+                  <p className="mt-2 text-sm leading-normal text-[#94a3b8]">
                       {experience.description}
                   </p>
                   <ul className="mt-2 flex flex-wrap">

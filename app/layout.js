@@ -5,16 +5,16 @@ import { GeistSans } from 'geist/font/sans';
 export const metadata = {
     metadataBase: new URL('https://aungpyaephyoe.vercel.app'),
     title: {
-        default: 'Typle | Developer',
-        template: '%s | Typle',
+        default: 'Aung Pyae Phyo',
+        template: '%s | Aung Pyae Phyo',
     },
     icons :[{ rel: 'icon', url: "/fav.png" }],
     description: 'Developer, writer, and creator.',
     openGraph: {
-        title: 'Typle',
+        title: 'Aung Pyae Phyo',
         description: 'Developer, writer, and creator.',
         url: 'https://aungpyaephyoe.vercel.app',
-        siteName: 'Typle',
+        siteName: 'Aung Pyae Phyo',
         locale: 'en_US',
         type: 'website',
     },
@@ -30,7 +30,7 @@ export const metadata = {
         },
     },
     twitter: {
-        title: 'Typle',
+        title: 'Aung Pyae Phyo',
         card: 'summary_large_image',
     },
 };

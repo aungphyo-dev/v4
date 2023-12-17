@@ -12,11 +12,11 @@
 
 
 .hero-pt-1-title {
-    @apply font-extrabold text-3xl lg:text-5xl text-[#CEE6F3] tracking-wide
+    @apply font-bold text-3xl lg:text-[48px] text-[#e2e8f0] tracking-wide
 }
 
 .hero-pt-1-paragraph {
-    @apply text-[#8892B0]
+    @apply text-[#e2e8f0] text-[20px] font-semibold
 }
 
 .hero-pt-1-btn-container {
