@@ -14,10 +14,10 @@ export const metadata = {
         template: '%s | Aung Pyae Phyo',
     },
     icons :[{ rel: 'icon', url: "/fav.png" }],
-    description: 'Developer, writer, and creator.',
+    description: 'Experienced Frontend developer',
     openGraph: {
         title: 'Aung Pyae Phyo',
-        description: 'Developer, writer, and creator.',
+        description: 'Experienced Frontend developer',
         url: 'https://aungpyaephyoe.vercel.app',
         siteName: 'Aung Pyae Phyo',
         locale: 'en_US',
