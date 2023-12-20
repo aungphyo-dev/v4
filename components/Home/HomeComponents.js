@@ -1,7 +1,8 @@
 "use client"
 import {About, AnimeC, Contact, Experience, Footer, Hero, Project} from "@/components";
+import {Suspense} from "react";
 
-const HomeComponents = ({projects}) => {
+const HomeComponents = () => {
     return (
         <main className='relative w-full'>
             <AnimeC/>
@@ -15,7 +16,7 @@ const HomeComponents = ({projects}) => {
                     <div className='min-h-screen flex flex-col justify-start items-center px-3 lg:px-16'>
                         <About/>
                         <Experience/>
-                        <Project projects={projects}/>
+                        <Project/>
                         <Contact/>
                         <Footer/>
                     </div>

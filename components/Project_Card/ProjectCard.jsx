@@ -19,7 +19,7 @@ const ProjectCard = ({project}) => {
                     </Link>
                     <p className="mt-2 text-sm leading-normal text-[#94a3b8]">{project.description}</p>
                     <ul className="mt-2 flex flex-wrap">
-                        {project.skills.map(skill => <li key={skill} className="mr-1.5 mt-2">
+                        {project.skills.map(skill => <li key={skill.toString()} className="mr-1.5 mt-2">
                             <div
                                 className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">{skill}
                             </div>
@@ -32,9 +32,7 @@ const ProjectCard = ({project}) => {
                         fill
                         priority
                         sizes={"500"}
-                        style={{
-                            objectFit: 'cover',
-                        }}
+                        style={{objectFit: 'cover',}}
                         src={`https://otgegesmjkdjmcppbsbl.supabase.co/storage/v1/object/public/projects/images/${project.image}`}
                         alt={"IMAGE"}/>
                 </div>
